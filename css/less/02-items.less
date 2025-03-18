@@ -1,12 +1,51 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
+.elm-helper {
+	display: block;
+	flex-shrink: 0;
+	position: relative;
+	cursor: pointer;
+	width: 24px;height: 24px;
+	background: url(../img/icons/help.svg) center no-repeat;
+	background-size: 16px auto;
+}
+.elm-stock {
+	display: inline-block;
+	position: relative;
+	text-align: left;
+	padding: 0 0 0 32px;
+	line-height: 24px;
+	color: var(--clr-success);
+	font-weight: 500;
+	.fi;
+	&.stock-out {
+		color: var(--clr-alert);
+		&:before {
+			background-image: url(../img/icons/stock-out.svg);
+		}
+	}
+	&:before {
+		content: "";
+		display: block;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		background: url(../img/icons/succefull.svg) center no-repeat;
+		background-size: 100% auto;
+		top: 0;left: 0;
+	}
+	.stock-info {
+		color: #6E7070;
+		display: block;
+	}
+}
 .item-tile-letter {
 	display: flex;
 	position: relative;
 	font-size: 12px;
 	line-height: 1.5;
-	&:has(.tile-button.active) {
+	&:has(.btn-action-toggle.active) {
 		li {
 			&:nth-child(5) {
 				&~li {
@@ -48,27 +87,7 @@
 		}
 	}
 	.tile-button {
-		display: inline-block;
-		padding: 8px 0;
-		font-size: 14px;
-		line-height: 1.5;
-		font-weight: 500;
-		color: inherit;
-		&:hover {
-			color: var(--clr-att);
-		}
-		.button-title {
-			display: block;
-			border-bottom: 1px dashed;
-		}
-		.button-title:before {
-			content: attr(data-show);
-		}
-		&.active {
-			.button-title:before {
-				content: attr(data-hide);
-			}
-		}
+		
 	}
 	.tile-action {
 		display: none;
@@ -132,6 +151,11 @@
 	padding: 7px;
 	border-radius: 4px;
 	font-size: 14px;
+	transition: all ease 0.2s;
+	color: var(--clr-base);
+	&:hover {
+		border-color: var(--clr-att);
+	}
 	.tile-photo-wrap {
 		width: 80px;
 		margin: 0 0 16px 0;
@@ -185,6 +209,18 @@
 	.btn, .frm-field-counter {
 		z-index: 8;
 	}
+	.frm-field-counter {
+		.form-input {
+			pointer-events: none;
+		}
+	}
+	a {
+		&:not(.btn) {
+			&:not(:hover) {
+				color: inherit;
+			}
+		}
+	}
 }
 .item-tile-info {
 	display: block;
@@ -208,6 +244,24 @@
 	padding-left: 32px;
 	.info-value-popup {
 		display: none;
+		position: absolute;
+		top: 100%;left: -24px;
+		z-index: 20;
+		padding: 31px 6px 16px 24px;
+		width: 317px;
+		animation: fadein ease 0.2s;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 15px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: #fff;
+			border: 1px solid #E5E5E5;
+			border-radius: 4px;
+		}
 	}
 	.info-title {
 		font-weight: 500;
@@ -227,6 +281,18 @@
 		color: inherit;
 		&:hover {
 			color: var(--clr-att);
+		}
+	}
+	.btn-info {
+		&.button-border {
+			border-bottom: 1px dotted;
+		}
+	}
+	.elm-info-item {
+		margin: 0 0 24px 0;
+		padding-right: 0;
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
@@ -458,14 +524,21 @@
 			width: 56px;
 			font-size: 48px;
 		}
-		.tile-button {
-			font-size: 16px;
-		}
 	}
 	.item-tile-logo {
 		aspect-ratio: 250/125;
 	}
 	.elm-info-item {
+		&:hover {
+			.info-value-popup {
+				display: block;
+			}
+		}
+		&:has(.btn-info.active) {
+			.info-value-popup {
+				display: block;
+			}
+		}
 		.info-value-title {
 			&:has(+.info-value-popup) {
 				.btn-info {

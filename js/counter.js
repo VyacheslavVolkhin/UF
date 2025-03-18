@@ -84,7 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 		
-		btnPlus.addEventListener('click', () => {
+		btnPlus.addEventListener('click', (event) => {
+			event.preventDefault();
 			initializeInput();
 			if (btnPlus.classList.contains('button-disabled')) return;
 			currentValue = parseFloat((currentValue + dataStep).toFixed(10));
@@ -94,7 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 
 		
-		btnMinus.addEventListener('click', () => {
+		btnMinus.addEventListener('click', (event) => {
+			event.preventDefault();
 			initializeInput();
 			if (btnMinus.classList.contains('button-disabled')) return;
 			currentValue = parseFloat((currentValue - dataStep).toFixed(10));

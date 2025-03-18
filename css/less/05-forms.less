@@ -1,6 +1,58 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.frm-field-range {
+	position: relative;
+	padding: 0 20px 24px 8px;
+	.field-range-wrap {
+		display: flex;
+		margin: 0 -28px 8px -16px;
+	}
+	.field-range {
+		width: 50%;
+		padding: 0 8px;
+	}
+	.form-input {
+		text-align: center;
+		padding: 0 8px;
+	}
+	.noUi-target {
+		padding: 5px 0 10px 0;
+		height: 40px;
+		border: none;
+		box-shadow: none;
+		border-radius: 0;
+		background: none;
+		position: relative;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 16px;
+			left: -8px;right: -12px;
+			height: 4px;
+			background: #B7B7B8;
+			border-radius: 2px;
+		}
+	}
+	.noUi-connect {
+		height: 4px;
+		background: var(--clr-base);
+		margin-top: 11px;
+	}
+	.noUi-horizontal .noUi-handle {
+		width: 24px;height: 24px;
+		border: 2px solid var(--clr-base);
+		background: #fff;
+		box-shadow: none;
+		cursor: pointer;
+		border-radius: 12px;
+		margin-top: 7px;
+		&:before, &:after {
+			display: none;
+		}
+	}
+}
 .frm-field-counter {
 	display: block;
 	position: relative;
@@ -9,6 +61,21 @@
 	padding: 0 48px;
 	width: 100%;
 	max-width: 100%;
+	&.counter-large {
+		height: 48px;
+		padding: 0 56px;
+		.form-input {
+			height: 48px;
+			font-size: 18px;
+			font-weight: 500;
+		}
+		.btn.button-minus, .btn.button-plus {
+			width: 48px;height: 48px;
+			&:before {
+				width: 32px;height: 32px;
+			}
+		}
+	}
 	.button-plus {
 		position: absolute;
 		top: 0;right: 0;

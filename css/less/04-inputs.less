@@ -1,6 +1,10 @@
 /* ----------------------------------- *\
 			inputs elements styles
 \* ----------------------------------- */
+[placeholder]::-webkit-input-placeholder {color: var(--clr-base);}
+[placeholder]:-moz-placeholder {color: var(--clr-base);}
+[placeholder]::-moz-placeholder {color: var(--clr-base);}
+[placeholder]:-ms-input-placeholder {color: var(--clr-base);}
 .form-input[placeholder] {
     text-overflow: ellipsis;
 }
@@ -10,6 +14,10 @@
 	border: 1px solid #E8E8E8;
 	background: #fff;
 	border-radius: 4px;
+	padding: 0 15px;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--clr-base);
 }
 textarea.form-input {
 
@@ -20,7 +28,7 @@ select.form-input {
     width: 100%;
     padding-right: 30px;
     background-image: url(../img/icons/arrow-select.svg);
-    background-position: right 20px center;
+    background-position: right 8px center;
     background-color: #fff;
     background-repeat: no-repeat;
     -moz-appearance: none;
@@ -47,7 +55,7 @@ select.form-input {
         color: inherit;
         font-weight: bold;
         background-image: url(../img/icons/arrow-select.png);
-        background-size: 8px auto;
+        background-size: 24px auto;
         background-repeat: no-repeat;
         background-position: right center;
     }
@@ -55,12 +63,8 @@ select.form-input {
 select::-ms-expand {
     display: none;
 }
-//   <select class="form-input form-input-line" required>
-//       <option value="" disabled selected hidden>Выбрать</option>
-//       <option>Пункт списка</option>
-//   </select>
 select.form-input:required:invalid {
-    color: #ADADAD;
+    color: var(--clr-base)
 }
 .btn {
 	background: var(--clr-att);
@@ -349,22 +353,9 @@ select.form-input:required:invalid {
 		}
     }
     &.ico-close {
-        &:after, &:before {
-            width: 20px;
-            height: 2px;
-            top: 50%;
-            left: 50%;
-            bottom: auto;
-            right: auto;
-            margin: -1px 0 0 -10px;
-            background: var(--clr-base);
-        }
-        &:before {
-            .t-rotate(45deg);
-        }
-        &:after {
-            .t-rotate(-45deg);
-        }
+		&:before {
+			background-image: url(../img/icons/close.svg);
+		}
     }
     &.button-soc {
         img, svg {
@@ -392,6 +383,30 @@ select.form-input:required:invalid {
 		&:after {
 			background-image: url(../img/icons/close.svg);
 			background-size: 32px auto;
+		}
+	}
+}
+.btn-action-toggle {
+	display: inline-block;
+	padding: 8px 0;
+	font-size: 14px;
+	line-height: 1.5;
+	font-weight: 500;
+	color: var(--clr-base);
+	.fi;
+	&:hover {
+		color: var(--clr-att);
+	}
+	.button-title {
+		display: block;
+		border-bottom: 1px dashed;
+	}
+	.button-title:before {
+		content: attr(data-show);
+	}
+	&.active {
+		.button-title:before {
+			content: attr(data-hide);
 		}
 	}
 }
@@ -428,5 +443,8 @@ select.form-input:required:invalid {
 		height: 24px;
 		line-height: 24px;
 		font-size: 14px;
+	}
+	.btn-action-toggle {
+		font-size: 16px;
 	}
 }

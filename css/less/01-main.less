@@ -71,6 +71,18 @@ p, ul, ol, table, blockquote, .bq-text {
 }
 li {
 	position: relative;
+	padding-left: 24px;
+	&:before {
+		content: "";
+		display: block;
+		width: 4px;height: 4px;
+		border-radius: 50%;
+		background: currentColor;
+		position: absolute;
+		top: 0.75em;
+		left: 10px;
+		margin-top: -2px;
+	}
 }
 .menu, .list {
     margin: 0;
@@ -94,6 +106,12 @@ a {
 a.link-main, .link-main {
     text-decoration: none;
     border-bottom: 1px solid;
+}
+.link-dark {
+	color: var(--clr-base);
+	&:hover {
+		color: var(--clr-att);
+	}
 }
 .link-phone, .link-email, .link-location {
     white-space: nowrap;
@@ -164,33 +182,6 @@ h6, .h6-title {
 		margin-bottom: 0;
 	}
 }
-.m8 {
-	margin: 8px 0;
-}
-.m16 {
-	margin: 16px 0;
-}
-.m24 {
-	margin: 24px 0;
-}
-.mb8 {
-	margin-bottom: 8px;
-}
-.mb16 {
-	margin-bottom: 16px;
-}
-.mb24 {
-	margin-bottom: 24px;
-}
-.mt8 {
-	margin-top: 8px;
-}
-.mt16 {
-	margin-top: 16px;
-}
-.mt24 {
-	margin-top: 24px;
-}
 .page-subtitle {
 	font-size: 16px;
 	&+* {
@@ -227,6 +218,20 @@ h6, .h6-title {
 .text-center, .title-center {
     text-align: center;
 }
+table {
+	text-align: left;
+	th, td {
+		padding: 8px 16px 8px 16px;
+		text-align: inherit;
+		font-weight: 400;
+		line-height: 1.5;
+		border: none;
+		vertical-align: top;
+	}
+	th {
+		font-weight: 600;
+	}
+}
 @media (max-width: 1399px) {
     :root {
         font-size: 9.5px;
@@ -241,6 +246,9 @@ h6, .h6-title {
     :root {
         font-size: 8px;
     }
+	.title-mobile-large {
+		font-size: 24px;
+	}
 }
 @media (max-width: 767px) {
     :root {

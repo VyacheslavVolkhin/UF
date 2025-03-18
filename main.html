@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/fancybox.css">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/nouislider.min.css">
     <link rel="stylesheet" href="./css/bootstrap/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
     <script src="./js/swiper-bundle.min.js" defer></script>
     <script src="./js/fancybox.umd.js" defer></script>
     <script src="./js/counter.js" defer></script>
+    <script src="./js/nouislider.min.js" defer></script>
     <script src="./js/scripts.js" defer></script>
 </head>
 
@@ -224,7 +226,25 @@
                                         <a href="" class="btn-info">+8 (800) 123-45-67</a>
                                     </div>
                                     <div class="info-value-popup">
-                                        333
+                                        <div class="header-info-item elm-info-item">
+                                            <div class="info-title">Адрес</div>
+                                            <div class="info-value">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/location.svg" alt="">
+                                                </div>
+                                                <div class="info-value-title">ул. Тимирязева 10\4 офис 413</div>
+                                            </div>
+                                        </div>
+                                        <div class="header-info-item elm-info-item">
+                                            <div class="info-value">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/map.svg" alt="">
+                                                </div>
+                                                <div class="info-value-title">
+                                                    <a href="" class="btn-info button-border">Показать на ЯндексКартах</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -238,7 +258,25 @@
                                         <a href="" class="btn-info">+8 (800) 123-45-67</a>
                                     </div>
                                     <div class="info-value-popup">
-                                        333
+                                        <div class="header-info-item elm-info-item">
+                                            <div class="info-title">Адрес</div>
+                                            <div class="info-value">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/location.svg" alt="">
+                                                </div>
+                                                <div class="info-value-title">ул. Тимирязева 10\4 офис 413</div>
+                                            </div>
+                                        </div>
+                                        <div class="header-info-item elm-info-item">
+                                            <div class="info-value">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/map.svg" alt="">
+                                                </div>
+                                                <div class="info-value-title">
+                                                    <a href="" class="btn-info button-border">Показать на ЯндексКартах</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -440,150 +478,146 @@
                     <div class="row">
                         <!-- item -->
                         <div class="col col-6 col-md-12">
-                            <div class="item-tile-catalog">
-                                <a href="" class="tile-link"></a>
-                                <div class="tile-photo-wrap">
+                            <a href="" class="item-tile-catalog">
+                                <div class="tile-photo-wrap col-lg-1">
                                     <div class="tile-photo photo-cover">
                                         <img src="./img/catalog.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="tile-info-wrap">
-                                    <div class="tile-title">2568-558-BZ</div>
-                                    <div class="tile-info">Масляные фильтры</div>
-                                    <div class="tile-title">CATERPILLAR 5000483</div>
+                                    <div class="tile-title col-lg-2">2568-558-BZ</div>
+                                    <div class="tile-info col-lg-2">Масляные фильтры</div>
+                                    <div class="tile-title col-lg-2">CATERPILLAR 5000483</div>
                                 </div>
                                 <div class="tile-actions-wrap">
-                                    <div class="tile-stock-wrap">
+                                    <div class="tile-stock-wrap col-lg-1">
                                         <div class="tile-title text-success">Товар в наличии</div>
                                     </div>
-                                    <div class="tile-counter-wrap">
+                                    <div class="tile-counter-wrap col-lg-2">
                                         <div class="frm-field-counter js-counter">
-                                            <button class="js-button-counter-plus btn button-light button-border button-plus"></button>
-                                            <button class="js-button-counter-minus btn button-light button-border button-minus"></button>
+                                            <div class="js-button-counter-plus btn button-light button-border button-plus"></div>
+                                            <div class="js-button-counter-minus btn button-light button-border button-minus"></div>
                                             <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="100" value="100">
                                         </div>
                                     </div>
-                                    <div class="tile-action-wrap">
-                                        <a href="" class="btn button-dark button-border button-small">
+                                    <div class="tile-action-wrap col-lg-2">
+                                        <div class="btn button-dark button-border button-small">
                                             <div class="button-title">Подробнее</div>
                                             <div class="button-ico">
                                                 <img src="./img/icons/arrow-right.svg" alt="">
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <!-- /item -->
                         <!-- item -->
                         <div class="col col-6 col-md-12">
-                            <div class="item-tile-catalog">
-                                <a href="" class="tile-link"></a>
-                                <div class="tile-photo-wrap">
+                            <a href="" class="item-tile-catalog">
+                                <div class="tile-photo-wrap col-lg-1">
                                     <div class="tile-photo photo-cover">
                                         <img src="./img/catalog.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="tile-info-wrap">
-                                    <div class="tile-title">2568-558-BZ</div>
-                                    <div class="tile-info">Масляные фильтры</div>
-                                    <div class="tile-title">CATERPILLAR 5000483</div>
+                                    <div class="tile-title col-lg-2">2568-558-BZ</div>
+                                    <div class="tile-info col-lg-2">Масляные фильтры</div>
+                                    <div class="tile-title col-lg-2">CATERPILLAR 5000483</div>
                                 </div>
                                 <div class="tile-actions-wrap">
-                                    <div class="tile-stock-wrap">
+                                    <div class="tile-stock-wrap col-lg-1">
                                         <div class="tile-title text-success">Товар в наличии</div>
                                     </div>
-                                    <div class="tile-counter-wrap">
+                                    <div class="tile-counter-wrap col-lg-2">
                                         <div class="frm-field-counter js-counter">
-                                            <button class="js-button-counter-plus btn button-light button-border button-plus"></button>
-                                            <button class="js-button-counter-minus btn button-light button-border button-minus"></button>
+                                            <div class="js-button-counter-plus btn button-light button-border button-plus"></div>
+                                            <div class="js-button-counter-minus btn button-light button-border button-minus"></div>
                                             <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="100" value="100">
                                         </div>
                                     </div>
-                                    <div class="tile-action-wrap">
-                                        <a href="" class="btn button-dark button-border button-small">
+                                    <div class="tile-action-wrap col-lg-2">
+                                        <div class="btn button-dark button-border button-small">
                                             <div class="button-title">Подробнее</div>
                                             <div class="button-ico">
                                                 <img src="./img/icons/arrow-right.svg" alt="">
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <!-- /item -->
                         <!-- item -->
                         <div class="col col-6 col-md-12">
-                            <div class="item-tile-catalog">
-                                <a href="" class="tile-link"></a>
-                                <div class="tile-photo-wrap">
+                            <a href="" class="item-tile-catalog">
+                                <div class="tile-photo-wrap col-lg-1">
                                     <div class="tile-photo photo-cover">
                                         <img src="./img/catalog.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="tile-info-wrap">
-                                    <div class="tile-title">2568-558-BZ</div>
-                                    <div class="tile-info">Масляные фильтры</div>
-                                    <div class="tile-title">CATERPILLAR 5000483</div>
+                                    <div class="tile-title col-lg-2">2568-558-BZ</div>
+                                    <div class="tile-info col-lg-2">Масляные фильтры</div>
+                                    <div class="tile-title col-lg-2">CATERPILLAR 5000483</div>
                                 </div>
                                 <div class="tile-actions-wrap">
-                                    <div class="tile-stock-wrap">
+                                    <div class="tile-stock-wrap col-lg-1">
                                         <div class="tile-title text-success">Товар в наличии</div>
                                     </div>
-                                    <div class="tile-counter-wrap">
+                                    <div class="tile-counter-wrap col-lg-2">
                                         <div class="frm-field-counter js-counter">
-                                            <button class="js-button-counter-plus btn button-light button-border button-plus"></button>
-                                            <button class="js-button-counter-minus btn button-light button-border button-minus"></button>
+                                            <div class="js-button-counter-plus btn button-light button-border button-plus"></div>
+                                            <div class="js-button-counter-minus btn button-light button-border button-minus"></div>
                                             <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="100" value="100">
                                         </div>
                                     </div>
-                                    <div class="tile-action-wrap">
-                                        <a href="" class="btn button-dark button-border button-small">
+                                    <div class="tile-action-wrap col-lg-2">
+                                        <div class="btn button-dark button-border button-small">
                                             <div class="button-title">Подробнее</div>
                                             <div class="button-ico">
                                                 <img src="./img/icons/arrow-right.svg" alt="">
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <!-- /item -->
                         <!-- item -->
                         <div class="col col-6 col-md-12">
-                            <div class="item-tile-catalog">
-                                <a href="" class="tile-link"></a>
-                                <div class="tile-photo-wrap">
+                            <a href="" class="item-tile-catalog">
+                                <div class="tile-photo-wrap col-lg-1">
                                     <div class="tile-photo photo-cover">
                                         <img src="./img/catalog.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="tile-info-wrap">
-                                    <div class="tile-title">2568-558-BZ</div>
-                                    <div class="tile-info">Масляные фильтры</div>
-                                    <div class="tile-title">CATERPILLAR 5000483</div>
+                                    <div class="tile-title col-lg-2">2568-558-BZ</div>
+                                    <div class="tile-info col-lg-2">Масляные фильтры</div>
+                                    <div class="tile-title col-lg-2">CATERPILLAR 5000483</div>
                                 </div>
                                 <div class="tile-actions-wrap">
-                                    <div class="tile-stock-wrap">
+                                    <div class="tile-stock-wrap col-lg-1">
                                         <div class="tile-title text-success">Товар в наличии</div>
                                     </div>
-                                    <div class="tile-counter-wrap">
+                                    <div class="tile-counter-wrap col-lg-2">
                                         <div class="frm-field-counter js-counter">
-                                            <button class="js-button-counter-plus btn button-light button-border button-plus"></button>
-                                            <button class="js-button-counter-minus btn button-light button-border button-minus"></button>
+                                            <div class="js-button-counter-plus btn button-light button-border button-plus"></div>
+                                            <div class="js-button-counter-minus btn button-light button-border button-minus"></div>
                                             <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="100" value="100">
                                         </div>
                                     </div>
-                                    <div class="tile-action-wrap">
-                                        <a href="" class="btn button-dark button-border button-small">
+                                    <div class="tile-action-wrap col-lg-2">
+                                        <div class="btn button-dark button-border button-small">
                                             <div class="button-title">Подробнее</div>
                                             <div class="button-ico">
                                                 <img src="./img/icons/arrow-right.svg" alt="">
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <!-- /item -->
                     </div>

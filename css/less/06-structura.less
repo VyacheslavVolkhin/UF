@@ -692,6 +692,18 @@ html.with-fancybox body.hide-scrollbar {
 		font-size: 16px;
 	}
 }
+@media (min-width: 992px) and (max-width: 1799px) {
+	.header {
+		.header-info-item  {
+			&:last-child {
+				.info-value-popup {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+}
 @media (min-width: 1200px) {
 	.header-menu-wrap .menu-catalog .menu {
 		max-width: 1140px;
