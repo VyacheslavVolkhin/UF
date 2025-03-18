@@ -7,69 +7,77 @@ document.addEventListener("DOMContentLoaded", function() {
 	let input0101 = document.getElementById('input0101');
 	let input0102 = document.getElementById('input0102');
 	let inputs01 = [input0101, input0102];
-	noUiSlider.create(slider01, {
-		start: [50, 12344],
-		connect: true,
-		step: 1,
-		range: {
-			'min': 0,
-			'max': 20000
-		}
-	});
-	slider01.noUiSlider.on('update', function (values, handle) {
-		inputs01[handle].value = values[handle];
-	});
+	if (slider01) {
+		noUiSlider.create(slider01, {
+			start: [50, 12344],
+			connect: true,
+			step: 1,
+			range: {
+				'min': 0,
+				'max': 20000
+			}
+		});
+		slider01.noUiSlider.on('update', function (values, handle) {
+			inputs01[handle].value = values[handle];
+		});
+	}
 	//slider 02
 	let slider02 = document.getElementById('slider02');
 	let input0201 = document.getElementById('input0201');
 	let input0202 = document.getElementById('input0202');
 	let inputs02 = [input0201, input0202];
-	noUiSlider.create(slider02, {
-		start: [50, 12344],
-		connect: true,
-		step: 1,
-		range: {
-			'min': 0,
-			'max': 20000
-		}
-	});
-	slider02.noUiSlider.on('update', function (values, handle) {
-		inputs02[handle].value = values[handle];
-	});
+	if (slider02) {
+		noUiSlider.create(slider02, {
+			start: [50, 12344],
+			connect: true,
+			step: 1,
+			range: {
+				'min': 0,
+				'max': 20000
+			}
+		});
+		slider02.noUiSlider.on('update', function (values, handle) {
+			inputs02[handle].value = values[handle];
+		});
+	}
 	//slider 03
 	let slider03 = document.getElementById('slider03');
 	let input0301 = document.getElementById('input0301');
 	let input0302 = document.getElementById('input0302');
 	let inputs03 = [input0301, input0302];
-	noUiSlider.create(slider03, {
-		start: [50, 12344],
-		connect: true,
-		step: 1,
-		range: {
-			'min': 0,
-			'max': 20000
-		}
-	});
-	slider03.noUiSlider.on('update', function (values, handle) {
-		inputs03[handle].value = values[handle];
-	});
+	if (slider02) {
+		noUiSlider.create(slider03, {
+			start: [50, 12344],
+			connect: true,
+			step: 1,
+			range: {
+				'min': 0,
+				'max': 20000
+			}
+		});
+		slider03.noUiSlider.on('update', function (values, handle) {
+			inputs03[handle].value = values[handle];
+		});
+	}
 	//slider 04
 	let slider04 = document.getElementById('slider04');
 	let input0401 = document.getElementById('input0401');
 	let input0402 = document.getElementById('input0402');
 	let inputs04 = [input0401, input0402];
-	noUiSlider.create(slider04, {
-		start: [50, 12344],
-		connect: true,
-		step: 1,
-		range: {
-			'min': 0,
-			'max': 20000
-		}
-	});
-	slider04.noUiSlider.on('update', function (values, handle) {
-		inputs04[handle].value = values[handle];
-	});
+	if (slider04) {
+		noUiSlider.create(slider04, {
+			start: [50, 12344],
+			connect: true,
+			step: 1,
+			range: {
+				'min': 0,
+				'max': 20000
+			}
+		});
+		slider04.noUiSlider.on('update', function (values, handle) {
+			inputs04[handle].value = values[handle];
+		});
+	}
 	
 	
 	
