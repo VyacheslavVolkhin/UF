@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 
-
 	
 	//slider 01
 	let slider01 = document.getElementById('slider01');
