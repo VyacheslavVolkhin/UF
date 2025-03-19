@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	let input0101 = document.getElementById('input0101');
 	let input0102 = document.getElementById('input0102');
 	let inputs01 = [input0101, input0102];
-	const inputVal0101 = parseFloat(document.getElementById('input0101').value) || 0;
-	const inputVal0102 = parseFloat(document.getElementById('input0102').value) || 20000;
 	if (slider01) {
+		const inputVal0101 = parseFloat(document.getElementById('input0101').value) || 0;
+		const inputVal0102 = parseFloat(document.getElementById('input0102').value) || 20000;
 		noUiSlider.create(slider01, {
 			start: [inputVal0101, inputVal0102],
 			connect: true,
@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	let input0201 = document.getElementById('input0201');
 	let input0202 = document.getElementById('input0202');
 	let inputs02 = [input0201, input0202];
-	const inputVal0201 = parseFloat(document.getElementById('input0201').value) || 0;
-	const inputVal0202 = parseFloat(document.getElementById('input0202').value) || 20000;
 	if (slider02) {
+		const inputVal0201 = parseFloat(document.getElementById('input0201').value) || 0;
+		const inputVal0202 = parseFloat(document.getElementById('input0202').value) || 20000;
 		noUiSlider.create(slider02, {
 			start: [inputVal0201, inputVal0202],
 			connect: true,
@@ -50,9 +50,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	let input0301 = document.getElementById('input0301');
 	let input0302 = document.getElementById('input0302');
 	let inputs03 = [input0301, input0302];
-	const inputVal0301 = parseFloat(document.getElementById('input0301').value) || 0;
-	const inputVal0302 = parseFloat(document.getElementById('input0302').value) || 20000;
 	if (slider03) {
+		const inputVal0301 = parseFloat(document.getElementById('input0301').value) || 0;
+		const inputVal0302 = parseFloat(document.getElementById('input0302').value) || 20000;
 		noUiSlider.create(slider03, {
 			start: [inputVal0301, inputVal0302],
 			connect: true,
@@ -71,9 +71,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	let input0401 = document.getElementById('input0401');
 	let input0402 = document.getElementById('input0402');
 	let inputs04 = [input0401, input0402];
-	const inputVal0401 = parseFloat(document.getElementById('input0401').value) || 0;
-	const inputVal0402 = parseFloat(document.getElementById('input0402').value) || 20000;
 	if (slider04) {
+		const inputVal0401 = parseFloat(document.getElementById('input0401').value) || 0;
+		const inputVal0402 = parseFloat(document.getElementById('input0402').value) || 20000;
 		noUiSlider.create(slider04, {
 			start: [inputVal0401, inputVal0402],
 			connect: true,
@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			inputs04[handle].value = values[handle];
 		});
 	}
+	let filterReset = document.getElementById('filterReset');
 	if (filterReset) {
 		filterReset.addEventListener('click', () => {
 			slider01.noUiSlider.reset();
